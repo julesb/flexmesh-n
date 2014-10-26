@@ -2,38 +2,28 @@ intersection () {
   difference () {
     union () {
       rotate (a=36.0, v=[0.0, 0.0, 1.0]) {
-        union () {
-          translate ([11.90911131692856, 0.0, 0.0]) {
-            sphere ($fs=0.9, r=5, center=true);
-          }
+        translate ([11.90911131692856, 0.0, 0.0]) {
+          sphere ($fs=0.9, r=5, center=true);
         }
       }
       rotate (a=108.0, v=[0.0, 0.0, 1.0]) {
-        union () {
-          translate ([11.90911131692856, 0.0, 0.0]) {
-            sphere ($fs=0.9, r=5, center=true);
-          }
+        translate ([11.90911131692856, 0.0, 0.0]) {
+          sphere ($fs=0.9, r=5, center=true);
         }
       }
       rotate (a=180.0, v=[0.0, 0.0, 1.0]) {
-        union () {
-          translate ([11.90911131692856, 0.0, 0.0]) {
-            sphere ($fs=0.9, r=5, center=true);
-          }
+        translate ([11.90911131692856, 0.0, 0.0]) {
+          sphere ($fs=0.9, r=5, center=true);
         }
       }
       rotate (a=252.0, v=[0.0, 0.0, 1.0]) {
-        union () {
-          translate ([11.90911131692856, 0.0, 0.0]) {
-            sphere ($fs=0.9, r=5, center=true);
-          }
+        translate ([11.90911131692856, 0.0, 0.0]) {
+          sphere ($fs=0.9, r=5, center=true);
         }
       }
       rotate (a=324.0, v=[0.0, 0.0, 1.0]) {
-        union () {
-          translate ([11.90911131692856, 0.0, 0.0]) {
-            sphere ($fs=0.9, r=5, center=true);
-          }
+        translate ([11.90911131692856, 0.0, 0.0]) {
+          sphere ($fs=0.9, r=5, center=true);
         }
       }
       cylinder (h=6.751, r=11.90911131692856, center=true);
