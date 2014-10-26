@@ -6,8 +6,8 @@
 
 (def TWOPI (* Math/PI 2.0))
 (def height 6.751)
-(def cutout-width 10.0)
-(def side-length 14.0)
+(def cutout-width 9.925)
+(def side-length 14.95)
 
 
 (defn circumrad [side-len n]
@@ -70,3 +70,5 @@
 (spit "output/FlexMesh2NOct.scad" (write-scad (piece 8)))
 (spit "output/FlexMesh2NEnnea.scad" (write-scad (piece 9)))
 (spit "output/FlexMesh2NDeca.scad" (write-scad (piece 10)))
+
+(Math/sqrt 50.0)
