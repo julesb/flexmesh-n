@@ -50,8 +50,8 @@
         halfstep (/ step 2.0)]
     (union
       (map #(rotate (+ (* step %) halfstep) [0.0 0.0 1.0]
-              (union
-                (translate [(circumrad side-length n) 0.0 0.0] (with-fs 0.9 (sphere 5)))))
+             (translate [(circumrad side-length n) 0.0 0.0]
+                        (with-fs 0.9 (sphere 5))))
            (range n))
       (cylinder (circumrad side-length n) height))))
 
