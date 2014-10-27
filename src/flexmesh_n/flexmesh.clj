@@ -6,8 +6,8 @@
 
 (def TWOPI (* Math/PI 2.0))
 (def height 6.751)
-(def cutout-width 9.925)
-(def side-length 14.95)
+(def cutout-width 10.0)
+(def side-length 14.0)
 
 
 (defn circumrad [side-len n]
@@ -30,9 +30,9 @@
 (defn cutout [n]
   (union
     (translate [(+ (inner-rad side-length n) 2.0) 0.0 0.0]
-               (cylinder (/ cutout-width 2.0) (+ height 0.1))
-               (translate [0.0 (/ cutout-width 2.0) 0.0] (with-fs 1.2 (sphere 2.0)))
-               (translate [0.0 (/ cutout-width -2.0) 0.0] (with-fs 1.2 (sphere 2.0))))
+               (with-fs 0.05 (cylinder (/ cutout-width 2.0) (+ height 0.1)))
+               (translate [0.0 (- (/ cutout-width 2.0) 0.5) 0.0] (with-fs 1.2 (sphere 2.0)))
+               (translate [0.0 (+ (/ cutout-width -2.0) 0.5) 0.0] (with-fs 1.2 (sphere 2.0))))
     (translate [(+ (inner-rad side-length n) 2.0 cutout-width) 0 0]
                (cube (* cutout-width 2.0)
                      (* cutout-width 1.0)
@@ -61,9 +61,10 @@
     (difference
       (corners n)
       (cutouts n))
-    (cylinder (* (circumrad side-length n) 2.0) (* height 0.99))))
+    (cylinder (* (circumrad side-length n) 2.0) height))
 
 
+(spit "output/FlexMesh2NQuad.scad" (write-scad (piece 4)))
 (spit "output/FlexMesh2NPent.scad" (write-scad (piece 5)))
 (spit "output/FlexMesh2NHex.scad" (write-scad (piece 6)))
 (spit "output/FlexMesh2NSept.scad" (write-scad (piece 7)))
@@ -71,4 +72,3 @@
 (spit "output/FlexMesh2NEnnea.scad" (write-scad (piece 9)))
 (spit "output/FlexMesh2NDeca.scad" (write-scad (piece 10)))
 
-(Math/sqrt 50.0)
