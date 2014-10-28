@@ -1,6 +1,6 @@
 # flexmesh-n
 
-A bit of scad-clj to generate [FlexMesh 2.0](http://www.thingiverse.com/thing:442571) compatible parts with any number of sides. FlexMesh provides tri and quad pieces only.
+A bit of scad-clj to generate [FlexMesh 2.0](http://www.thingiverse.com/thing:442571) compatible parts with any number of sides. FlexMesh provides tri and quad pieces only. The flexmesh-n stl files are also available at http://www.thingiverse.com/thing:517589
 
 The geometry was worked out by looking at the FlexMesh .stl files and printed parts and inferring the CSG, with a couple of measurements taken as well.
 
